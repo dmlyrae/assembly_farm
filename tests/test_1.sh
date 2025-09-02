@@ -15,10 +15,10 @@ OUTPUT=$($EXECUTABLE_PATH)
 
 # проверяем, содержит ли вывод вер
 if echo "$OUTPUT" | grep -q "Version: $EXPECTED_VERSION"; then
-    echo "Version check passed"
+    echo "Test 1: Version check passed"
     exit 0
 else
-    echo "Version check failed!"
+    echo "Test 1: Version check failed!"
     echo "Expected version: $EXPECTED_VERSION"
     echo "Got output:"
     echo "$OUTPUT"
