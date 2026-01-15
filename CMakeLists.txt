@@ -64,14 +64,14 @@ endif()
 #     COMMAND bash ${CMAKE_SOURCE_DIR}/tests/test_1.sh $<TARGET_FILE:helloworld_cli> ${PROJECT_VERSION}
 # )
 
-add_executable(tests tests/example_test.cpp)
+add_executable(project_name_tests tests/example_test.cpp)
 
-target_include_directories(tests PRIVATE 
+target_include_directories(project_name_tests PRIVATE 
     "${CMAKE_CURRENT_SOURCE_DIR}/src"
     "${CMAKE_BINARY_DIR}"
 )
 
-target_link_libraries(tests
+target_link_libraries(project_name_tests
     PRIVATE
     GTest::gtest
     GTest::gtest_main
@@ -81,4 +81,4 @@ target_link_libraries(tests
 
 # Регистрируем тесты в CMake
 include(GoogleTest)
-gtest_discover_tests(tests)
+gtest_discover_tests(project_name_tests)
